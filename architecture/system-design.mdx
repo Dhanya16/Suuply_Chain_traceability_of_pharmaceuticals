@@ -1,0 +1,58 @@
+**SYSTEM DESIGN**
+
+We intend to create a decentralized system to track and trace the supply chain of. 
+pharmaceutical products. There are mainly three components, manufacturers, other 
+stakeholders and consumers.
+
+[Fig. 5.1](https://github.com/Dhanya16/Suuply_Chain_traceability_of_pharmaceuticals/blob/main/architecture/images/manufacturers.jpg) explains how the process takes place on the manufacturer’s side. 
+Manufacturers first produce the required drug and then they make sure to record all 
+the details regarding the contents in the drug and other information. Furthermore at 
+this stage QR code and bar code are also generated. Later the produced drug 
+undergoes lab testing. If it fails the test, the drug will be blocked from further process, 
+else it is passed on to the next stage. This ensures that the drug produced is of utmost 
+quality. 
+
+[Fig. 5.2](https://github.com/Dhanya16/Suuply_Chain_traceability_of_pharmaceuticals/blob/main/architecture/images/consumers.jpg) explains how the process takes place on the consumer’s side. Either the 
+consumers can order from pharmacies or the pharmacies will order in bulk. These 
+order details are recorded in the blocks of the blockchain. When the pharmacy orders 
+drugs, these drugs will be delivered to them and then the drugs will be dispensed by 
+the pharmacy to the patients.
+
+If the patients order drugs from the pharmacy then the drugs will be delivered to the 
+patient’s home directly and the latter can scan the QR code to verify the authenticity 
+of the drug. 
+
+[Fig. 5.3](https://github.com/Dhanya16/Suuply_Chain_traceability_of_pharmaceuticals/blob/main/architecture/images/stakeholders.jpg) describes the involvement of various stakeholders in the system. The 
+manufacturers send the produced drug for packaging. These packages are now labelled with the assigned QR codes. Manufacturers also send the barcode to each of 
+the stakeholder to update the tracking records. This is done to prevent third party 
+access but also make the system decentralized. These stakeholders do not have 
+access to manipulate other data. Final quality control test is done to ensure that the 
+packaging is rightly done. These finalized packages are now sent to distributors, 
+logistic providers and warehouses. At every stage the details are recorded using the 
+barcode scanner. 
+
+The interaction between the consumer page and the pharmacy admin page plays a 
+crucial role in ensuring a smooth transaction process. On the pharmacy admin side, 
+there are four key functionalities. First, the pharmacy can place bulk orders directly to 
+the manufacturer, ensuring an adequate stock of medicines. Second, the pharmacy 
+admin has the ability to manage the inventory by adding new drugs, adding existing 
+drugs when they are back in stock, and categorizing them accordingly. These updates 
+made on the admin page are reflected on the consumer page, where users can browse 
+drugs under various categories. Third, the pharmacy admin has access to a "verify" 
+page where they can review the prescriptions uploaded by consumers when placing 
+their orders. The pharmacy admin is responsible for verifying the prescriptions, and 
+based on their review, they can either accept or reject the order. Lastly, there is an 
+"orders" page, where the pharmacy can view the completed orders once the 
+prescription has been verified and the payment has been processed.
+
+On the consumer side, the page is designed with a straightforward process for 
+ordering medicines. Consumers can browse the drugs available under different 
+categories and add the required drugs to their cart. Once the necessary items are 
+added, they are prompted to upload their prescription in the cart page before 
+proceeding with the order. This prescription is sent to the pharmacy’s verify page for 
+approval. After placing the order, consumers can track the status of their prescription 
+under the "Orders" page, which will display whether the prescription has been 
+accepted or rejected. If accepted, the consumer can proceed to the payment step, 
+where they will be redirected to Razorpay’s API for secure payment processing. Once 
+the payment is successfully completed, the order details are updated on the 
+pharmacy’s orders page for further processing and delivery.
